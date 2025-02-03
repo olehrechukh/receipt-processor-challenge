@@ -158,10 +158,9 @@ public class ReceiptProcessorTests(WebApplicationFactory<Program> factory)
     public async Task GetPoints_ValidId_ReturnsPoints()
     {
         ReceiptDto receipt = new(
-            Retailer: "Target",
-            PurchaseDate: "2022-01-01",
-            PurchaseTime: "13:01",
-            Items:
+            "Target",
+            "2022-01-01",
+            "13:01",
             [
                 new Item("Mountain Dew 12PK", 6.49m),
                 new Item("Emils Cheese Pizza", 12.25m),
@@ -169,7 +168,7 @@ public class ReceiptProcessorTests(WebApplicationFactory<Program> factory)
                 new Item("Doritos Nacho Cheese", 3.35m),
                 new Item("   Klarbrunn 12-PK 12 FL OZ  ", 12.00m)
             ],
-            Total: 35.35m
+            35.35m
         );
 
         var processResponse = await _httpClient.PostAsJsonAsync("/receipts/process", receipt);
@@ -187,13 +186,13 @@ public class ReceiptProcessorTests(WebApplicationFactory<Program> factory)
     public async Task GetPoints_ValidId_ReturnsPointsLessThanIntMaxValue()
     {
         ReceiptDto receipt = new(
-            Retailer: "Target",
-            PurchaseDate: "2022-01-01",
-            PurchaseTime: "13:01",
-            Items: Enumerable.Range(0, 6) // 1.2 * int.MaxValue
+            "Target",
+            "2022-01-01",
+            "13:01",
+            Enumerable.Range(0, 6) // 1.2 * int.MaxValue
                 .Select(_ => new Item("Emils Cheese Pizza", int.MaxValue + 0.00m))
                 .ToList(),
-            Total: 35.35m
+            35.35m
         );
 
         var processResponse = await _httpClient.PostAsJsonAsync("/receipts/process", receipt);
@@ -207,11 +206,14 @@ public class ReceiptProcessorTests(WebApplicationFactory<Program> factory)
         pointsResponseBody.Points.ShouldBeGreaterThanOrEqualTo(int.MaxValue);
     }
 
-    private static ReceiptDto GetValidReceipt() => new(
-        Retailer: "M&M Corner Market",
-        PurchaseDate: "2025-01-01",
-        PurchaseTime: "13:01",
-        Items: [new Item("Mountain Dew 12PK", 6.49m)],
-        Total: 6.49m
-    );
+    private static ReceiptDto GetValidReceipt()
+    {
+        return new ReceiptDto(
+            "M&M Corner Market",
+            "2025-01-01",
+            "13:01",
+            [new Item("Mountain Dew 12PK", 6.49m)],
+            6.49m
+        );
+    }
 }

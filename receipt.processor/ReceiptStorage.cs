@@ -15,5 +15,8 @@ public class ReceiptStorage
         return id;
     }
 
-    public long? GetReceiptPoints(Guid id) => _receiptPoints.TryGetValue(id, out var points) ? points : null;
+    public long? GetReceiptPoints(Guid id)
+    {
+        return _receiptPoints.TryGetValue(id, out var points) ? points : null;
+    }
 }

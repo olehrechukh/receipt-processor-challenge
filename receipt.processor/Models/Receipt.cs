@@ -15,7 +15,7 @@ public record Receipt(
         points += Retailer.Count(char.IsLetterOrDigit);
 
         // 50 points if the total is a round dollar amount with no cents.
-        if (Total == (int) Total) points += 50;
+        if (Total == (int)Total) points += 50;
 
         // 25 points if the total is a multiple of 0.25.
         if (Total % 0.25m == 0) points += 25;

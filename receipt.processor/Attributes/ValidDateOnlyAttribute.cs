@@ -8,7 +8,7 @@ public class ValidDateOnlyAttribute : ValidationAttribute
     {
         if (value is not string str || DateOnly.TryParse(str, out _))
             return ValidationResult.Success;
-        
+
         return new ValidationResult("Invalid time format. Please provide a valid time.");
     }
 }
