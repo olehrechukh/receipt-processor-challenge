@@ -1,0 +1,22 @@
+@hostAddress = http://localhost:5044
+
+### Process a receipt
+POST {{hostAddress}}/receipts/process
+Content-Type: application/json
+
+{
+  "Retailer": "Target",
+  "PurchaseDate": "2022-01-01",
+  "PurchaseTime": "13:01",
+  "Items": [
+    { "shortDescription": "Mountain Dew 12PK", "price": 6.49 },
+    { "shortDescription": "Emils Cheese Pizza", "price": 12.25 },
+    { "shortDescription": "Knorr Creamy Chicken", "price": 1.26 },
+    { "shortDescription": "Doritos Nacho Cheese", "price": 3.35 },
+    { "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ", "price": 12.00 }
+  ],
+  "Total": 35.35
+}
+
+### GetPoints
+GET {{hostAddress}}/receipts/5687a579-09f5-4e27-918e-e42173b54df4/points HTTP/1.1

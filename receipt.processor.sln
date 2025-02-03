@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "receipt.processor", "receipt.processor\receipt.processor.csproj", "{9CE971BE-1BD4-47D6-A8EE-788B7ACF855F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "receipt.processor.tests", "receipt.processor.tests\receipt.processor.tests.csproj", "{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CE971BE-1BD4-47D6-A8EE-788B7ACF855F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE971BE-1BD4-47D6-A8EE-788B7ACF855F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE971BE-1BD4-47D6-A8EE-788B7ACF855F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE971BE-1BD4-47D6-A8EE-788B7ACF855F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
