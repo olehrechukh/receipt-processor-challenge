@@ -27,7 +27,7 @@ The challenge involves creating an API that processes receipt data. The solution
 
 4. **Test the API**:
     - Please check a scalar API client on: http://localhost:8080/scalar/
-
+    - You can test the API using an [HTTP file](receipt.processor/receipt.processor.http) in VSCode [extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 ## How to Run from Docker Registry
 
 1. **Pull the Docker Image from the Registry**:
