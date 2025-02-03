@@ -4,7 +4,7 @@
 ## Summary
 This project is a solution to the [Receipt Processor Challenge](https://github.com/fetch-rewards/receipt-processor-challenge/tree/main) provided by Fetch Rewards. 
 
-The challenge involves creating an API that processes receipt data. The solution is implemented using C# and .NET 9, and the application is containerized with Docker for easy local rul.
+The solution is implemented using C# and .NET 9, and the application is containerized with Docker for easy local run.
 
 ## How to Run Locally (Using Local Build Image)
 
