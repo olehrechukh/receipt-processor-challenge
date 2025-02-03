@@ -10,7 +10,7 @@ The challenge involves creating an API that processes receipt data. The solution
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo/receipt-processor-challenge.git
+   git clone https://github.com/olehrechukh/receipt-processor-challenge
    cd receipt-processor-challenge
    ```
 
