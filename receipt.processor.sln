@@ -4,6 +4,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "receipt.processor", "receip
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "receipt.processor.tests", "receipt.processor.tests\receipt.processor.tests.csproj", "{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{57F84A5D-0A71-4CFE-AAD3-57614B46C8AA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{726EDFFE-3036-44F4-8C4F-479421282CB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{76DF6EB1-E4D3-41CE-BB52-48C8B3B2F3CC}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\receipt.processor.ci.yml = .github\workflows\receipt.processor.ci.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +31,9 @@ Global
 		{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38564DCB-EEA2-4399-B717-EDDD62F7EC3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{726EDFFE-3036-44F4-8C4F-479421282CB5} = {57F84A5D-0A71-4CFE-AAD3-57614B46C8AA}
+		{76DF6EB1-E4D3-41CE-BB52-48C8B3B2F3CC} = {726EDFFE-3036-44F4-8C4F-479421282CB5}
 	EndGlobalSection
 EndGlobal
