@@ -1,4 +1,4 @@
-@hostAddress = http://localhost:5044
+@hostAddress = http://localhost:8080
 
 ### Process a receipt
 POST {{hostAddress}}/receipts/process
@@ -13,10 +13,70 @@ Content-Type: application/json
     { "shortDescription": "Emils Cheese Pizza", "price": 12.25 },
     { "shortDescription": "Knorr Creamy Chicken", "price": 1.26 },
     { "shortDescription": "Doritos Nacho Cheese", "price": 3.35 },
-    { "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ", "price": 12.00 }
+    { "shortDescription": "Klarbrunn 12-PK 12 FL OZ", "price": 12.00 }
   ],
   "Total": 35.35
 }
 
+### Process a receipt
+POST {{hostAddress}}/receipts/process
+Content-Type: application/json
+
+{
+  "Retailer": "Walgreens",
+  "PurchaseDate": "2022-01-02",
+  "PurchaseTime": "08:13",
+  "Items": [
+    { "shortDescription": "Pepsi - 12-oz", "price": 1.25 },
+    { "shortDescription": "Dasani", "price": 1.40 }
+  ],
+  "Total": 2.65
+}
+
+### Process a receipt
+POST {{hostAddress}}/receipts/process
+Content-Type: application/json
+
+{
+  "Retailer": "Target",
+  "PurchaseDate": "2022-01-02",
+  "PurchaseTime": "13:13",
+  "Items": [
+    { "shortDescription": "Pepsi - 12-oz", "price": 1.25 }
+  ],
+  "Total": 1.25
+}
+
+### Process a receipt
+POST {{hostAddress}}/receipts/process
+Content-Type: application/json
+
+{
+  "Retailer": "Best Buy",
+  "PurchaseDate": "2022-02-15",
+  "PurchaseTime": "14:45",
+  "Items": [
+    { "shortDescription": "Samsung 50-inch TV", "price": 299.99 },
+    { "shortDescription": "Sony Bluetooth Headphones", "price": 49.99 }
+  ],
+  "Total": 349.98
+}
+
+### Process a receipt
+POST {{hostAddress}}/receipts/process
+Content-Type: application/json
+
+{
+  "Retailer": "CVS",
+  "PurchaseDate": "2022-03-04",
+  "PurchaseTime": "17:22",
+  "Items": [
+    { "shortDescription": "Reese's Peanut Butter Cups", "price": 2.50 },
+    { "shortDescription": "Pepsi - 12-oz", "price": 1.25 }
+  ],
+  "Total": 3.75
+}
+
 ### GetPoints
-GET {{hostAddress}}/receipts/5687a579-09f5-4e27-918e-e42173b54df4/points HTTP/1.1
+# NOTE: Update receiptId with a real value
+GET {{hostAddress}}/receipts/{receiptId}/points 
