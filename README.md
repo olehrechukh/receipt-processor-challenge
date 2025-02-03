@@ -43,3 +43,6 @@ The challenge involves creating an API that processes receipt data. The solution
 
 3. **Test the API**:
     - Please check a scalar API client on: http://localhost:8080/scalar/
+
+## Conclusion
+Thank you for reviewing my solution, and I look forward to hearing any feedback or questions regarding the implementation.
